@@ -1,0 +1,16 @@
+div {
+  display: flex;
+  flex-direction: row;
+  width: 500px;
+  height: 200px;
+  border: solid #698733 .5em;
+  border-radius: 1em;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+img {
+  display: flex;
+  height: 70%;
+}

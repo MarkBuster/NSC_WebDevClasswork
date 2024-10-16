@@ -1,0 +1,100 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #444;
+}
+
+/* Input Field and Button Styles */
+#task-input {
+    width: calc(100% - 140px); /* Adjusting for the button width and padding */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    box-sizing: border-box;
+}
+
+#add-task-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#add-task-btn:hover {
+    background-color: #218838;
+}
+
+/* Task List Styles */
+#task-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#task-list li {
+    background-color: white;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+#task-list li:hover {
+    background-color: #f9f9f9;
+}
+
+/* Complete and Remove Button Styles */
+#task-list button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#task-list button:disabled {
+    cursor: not-allowed;
+    background-color: #ccc;
+}
+
+#task-list .complete-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+#task-list .complete-btn:hover {
+    background-color: #0056b3;
+}
+
+#task-list .remove-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+#task-list .remove-btn:hover {
+    background-color: #c82333;
+}
+
+/* Completed Task Style */
+#task-list li.completed {
+    text-decoration: line-through;
+    color: #888;
+}

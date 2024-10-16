@@ -1,0 +1,19 @@
+Max Profit
+
+Imagine you are a Bitcoin trader who lost money trading this year. You can’t stop thinking, what’s the maximum profit I could have made by just making a single trade over the last month.
+
+btc_prices = [ 30105.65200462867, 30343.920449610774, 30624.061867067518, …] 
+
+btn_prices represent a list of Bitcoin prices, where btc_prices[i] represents the opening price for the i-1th hour of the month.
+
+So the Bitcoin price at start of first hour is btc_prices[0] = $30,105.65200462867.
+
+Similarly, the start price of the 72th hour is btc_prices[71] = $25,906.64626210193.
+
+
+The prompt: Your task is to implement an efficient get_max_profit function to find the maximum profit achievable with one buy and one sell operation.
+
+
+Constraints:
+The length of btc_prices is at least 2.
+The sell has to occur after buy, and can not happen at the same hour. Short-sell isn’t available.

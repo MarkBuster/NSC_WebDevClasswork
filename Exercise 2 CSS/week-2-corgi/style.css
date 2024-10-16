@@ -1,0 +1,30 @@
+html {
+  height: 100%;
+  width: 100%;
+  background-color: #1C2333;
+}
+
+h1 {
+  background-color: white;
+  font-family: "Arial",  "serif";
+  color: #444;
+}
+
+#css-abbr {
+  font-style: bold;
+  text-decoration: underline;
+  font-size: 40pt;
+  color: green;
+}
+
+#short {
+  font-family: "cursive";
+  font-size: 14pt;
+text-transform: lowercase;
+}
+
+#sweet {
+  font-family: "cursive";
+  font-style: italic;
+  color: purple;
+}
