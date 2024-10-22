@@ -86,6 +86,35 @@
    * timerId.
    */
   function advanceTimer() {
+    remainingSeconds--;
+    let minutes = Math.floor(remainingSeconds/ONE_MINUTE);
+    let seconds = (remainingSeconds % SECONDS_IN_MINUTE);
+
+    if (minutes <= 9) {
+      minutes = `0${minutes}`;
+    }
+    if (seconds <= 9) {
+      seconds = `0${seconds}`;
+    }
+    
+    id("time").textContent = `${minutes}:${seconds}`;
+    
+    if(remainingSeconds === 0) {
+      clearInterval(timerId);
+      id("time").textContent = "00:00";
+      
+      let timeIsUp = document.createElement("p");
+      timeIsUp.textContent = "Time is up!";
+      id("game-view").appendChild(timeIsUp);
+      
+      setTimeout(() => {
+        toggleViews();
+        timeIsUp.remove();
+      }, 2000);
+      
+      
+    }
+    
     // TODO
     // Implement the advanceTimer() method so it matches the function description above.
     // Do NOT use magic numbers in your code. Constants are defined at the top
