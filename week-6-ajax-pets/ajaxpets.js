@@ -45,7 +45,7 @@
   }
 
   /**
-   * function to display pet content
+   * function to display pet content.
    */
   function displayPets(urlList) {
     const pictures = id("pictures");
