@@ -22,9 +22,9 @@
    */
   function init() {
     //query input radio buttons to add event listener to trigger display of pets.
-    const input = qsa("input[name='animal']");
-    input.forEach((input) => {
-      input.addEventListener("change", makeRequest);
+    const INPUT = qsa("input[name='animal']");
+    INPUT.forEach((input) => {
+      INPUT.addEventListener("change", makeRequest);
     });
   }
 
@@ -32,8 +32,8 @@
    * Fetch data from the ajax pets api!
    */
   function makeRequest(input) {
-    const animal = getSelectedAnimal();
-    const URL = `https://courses.cs.washington.edu/courses/cse154/webservices/pets/ajaxpets.php?animal=${animal}`;
+    const ANIMAL = getSelectedAnimal();
+    const URL = `https://courses.cs.washington.edu/courses/cse154/webservices/pets/ajaxpets.php?animal=${ANIMAL}`;
 
     fetch(URL)
       .then(statusCheck)
@@ -48,8 +48,8 @@
    * function to display pet content.
    */
   function displayPets(urlList) {
-    const pictures = id("pictures");
-    pictures.innerHTML = ""; //clear previous pics
+    const PICTURES = id("pictures");
+    PICTURES.innerHTML = "";
     const petArray = urlList.trim().split("\n");
 
     //create element in a loop to post pictures
@@ -57,7 +57,7 @@
       const img = document.createElement("img");
       img.src = picURL;
       img.alt = "pet picture";
-      pictures.appendChild(img);
+      PICTURES.appendChild(img);
     });
   }
   /* ------------------------------ Helper Functions  ------------------------------ */
@@ -67,8 +67,8 @@
    * @returns animal type
    */
   function getSelectedAnimal() {
-    const inputs = qsa("input[name='animal']");
-    for (let input of inputs) {
+    const INPUTS = qsa("input[name='animal']");
+    for (let input of INPUTS) {
       if (input.checked) {
         return input.value;
       }

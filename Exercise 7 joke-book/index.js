@@ -62,10 +62,10 @@ app.get("/jokebook/categories", function (req, res) {
  *   - If the category is not valid, will respond with {'error': 'no category listed for category'}   */
 
 app.get("/jokebook/joke/:category", function (req, res) {
-  const category = req.params.category;
+  const CATEGORY = req.params.category;
 
-  if (categories.includes(category)) {
-    let jokes = category === "funnyJoke" ? funnyJoke : lameJoke;
+  if (categories.includes(CATEGORY)) {
+    let jokes = CATEGORY === "funnyJoke" ? funnyJoke : lameJoke;
 
     let randomIndex = Math.floor(Math.random() * jokes.length);
     let randomJoke = jokes[randomIndex];
